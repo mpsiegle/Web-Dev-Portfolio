@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blockhead Beerworks Website Redesign</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<button class="back-to-top" id="backToTopBtn">↑</button>
+
+<script>
+    const backToTopBtn = document.getElementById("backToTopBtn");
+
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > 400) {
+            backToTopBtn.style.display = "flex";
+        } else {
+            backToTopBtn.style.display = "none";
+        }
+    });
+
+    backToTopBtn.addEventListener("click", () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+</script>
+
+<body>
+
+<!-- HEADER -->
+<header class="main-header">
+    <a href="index.html">
+    <img src="images/logo.png" alt="Logo" class="header-logo">
+</a>
+
+    <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <nav class="nav-menu" id="navMenu">
+    <ul>
+        <li><a href="../index.html#about">About</a></li>
+        <li><a href="../index.html#projects">Projects</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+    </ul>
+</nav>
+
+</header>
+
+<!-- PAGE TITLE -->
+<section class="project-title-section">
+    <h1>Blockhead Beerworks<br>Website Redesign</h1>
+
+    <img src="images/blockhead_1.png" class="main-project-img" alt="Blockhead Mockup">
+</section>
+
+<!-- GRAY BACKGROUND CONTENT BLOCK -->
+<section class="project-content-wrapper">
+
+    <!-- OBJECTIVE -->
+    <div class="project-section">
+        <h2>Objective</h2>
+        <p class="project-text">
+            This project involved creating a functional website for a business. The website was to use 
+            HTML and CSS for styling and JavaScript for functionality. The brief indicated the website needed to have 
+            functioning JavaScript for e-commerce aspects (such as the product switcher) and the guessing game.
+        </p>
+
+        <div class="project-image-row">
+            <img src="images/blockhead_2.png" alt="Placeholder 1">
+            <img src="images/blockhead_3.png" alt="Placeholder 2">
+        </div>
+    </div>
+
+    <!-- PROCESS -->
+    <div class="project-section">
+        <h2>Process</h2>
+        <p class="project-text">
+            The first step was heuristically evaluating the existing website to see where a new site could improve. 
+            Next was laying out a color scheme and website layout that would incorporate the required content. 
+            The team was then tasked with styling the HTML and CSS and then adding fundamental JavaScript. 
+            After incorporating all the code together, I did troubleshooting and retested for bugs before confirming 
+            I had accomplished all goals of the project brief. 
+            Finally was submitting the final deliverables to the client.
+        </p>
+    </div>
+
+    <!-- RESULTS -->
+    <div class="project-section">
+        <h2>Results</h2>
+        <p class="project-text">
+            The project wrapped up on time and on budget, delivering a clean, fully functional experience 
+            that reflects the intended design and user flow. Explore the completed build on my GitHub profile, 
+            and check out the high-fidelity mock-up on Behance.
+        </p>
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="footer-inner">
+        <a class="resume-btn" href="#" target="_blank">Resume</a>
+
+        <a href="index.html">
+    <img src="images/logo.png" alt="Logo" class="header-logo">
+
+    <div class="social-icons">
+    <a href="https://github.com/mpsiegle" target="_blank" aria-label="Michael Siegle GitHub">
+    <i class="fab fa-github"></i>
+    </a>
+
+
+    <a href="https://www.linkedin.com/in/michael-siegle-1a4276125/" target="_blank" aria-label="LinkedIn">
+    <i class="fab fa-linkedin"></i>
+    </a>
+
+
+    <a href="mailto:michael_siegle@outlook.com" aria-label="Email Michael Siegle">
+    <i class="fas fa-envelope"></i>
+    </a>
+
+</div>
+
+    </div>
+</footer>
+
+<<div class="resume-popup" id="resumePopup">
+    <div class="resume-popup-box">
+        <h3>Resume added to downloads</h3>
+        <button id="closeResumePopup">Close</button>
+    </div>
+</div>
+
+
+    <script>
+document.querySelector(".contact-form").addEventListener("submit", function(e) {
+    e.preventDefault(); // stop page reload
+    alert("Thank you for the message!");
+    this.reset(); // optional: clears form
+});
+</script>
+
+<script>
+const hamburger = document.getElementById("hamburger");
+const navMenu = document.getElementById("navMenu");
+
+hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("active");
+    navMenu.classList.toggle("show");
+});
+</script>
+
+<script>
+const resumeBtn = document.querySelector(".resume-btn");
+const resumePopup = document.getElementById("resumePopup");
+const closeResumePopup = document.getElementById("closeResumePopup");
+
+resumeBtn.addEventListener("click", function(e) {
+    e.preventDefault();
+    resumePopup.style.display = "flex";
+});
+
+closeResumePopup.addEventListener("click", function() {
+    resumePopup.style.display = "none";
+});
+</script>
+
+
+
+</body>
+</html>
+
+</body>
+</html>

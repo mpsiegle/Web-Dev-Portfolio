@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outdoor Brand Website</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../css/project.css">
+</head>
+
+<button class="back-to-top" id="backToTopBtn">↑</button>
+
+<script>
+    const backToTopBtn = document.getElementById("backToTopBtn");
+
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > 400) {
+            backToTopBtn.style.display = "flex";
+        } else {
+            backToTopBtn.style.display = "none";
+        }
+    });
+
+    backToTopBtn.addEventListener("click", () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+</script>
+
+<body>
+
+<!-- HEADER -->
+<header class="main-header">
+    <a href="index.html">
+    <img src="images/logo.png" alt="Logo" class="header-logo">
+    </a>
+
+    <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <nav class="nav-menu" id="navMenu">
+    <ul>
+        <li><a href="../index.html#about">About</a></li>
+        <li><a href="../index.html#projects">Projects</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+    </ul>
+</nav>
+
+</header>
+
+<!-- PAGE TITLE -->
+<section class="project-title-section">
+    <h1>Outdoor Brand Website</h1>
+
+    <img src="images/outdoorbrand_1.png" class="main-project-img" alt="Project Mockup">
+</section>
+
+<!-- GRAY BLOCK -->
+<section class="project-content-wrapper">
+
+    <!-- OBJECTIVE -->
+    <div class="project-section">
+        <h2>Objective</h2>
+        <p class="project-text">
+            This project involved working with a team of web developers to design an e-commerce  website for Outdoorbrand, an outdoorswear camping/hiking company. The team was  tasked with designing a site and incorporating creative ways to engage users and  display/sell products. The team did this by creating interactive “Trail Cardsˮ that allowed  users to click on interactive cards to show information (such as conditions and  suggested equipment) about outdoor trails.
+        </p>
+
+        <div class="project-image-row">
+            <img src="images/outdoorbrand_2.png" alt="Placeholder 1">
+            <img src="images/outdoorbrand_4.png" alt="Placeholder 2">
+        </div>
+    </div>
+
+    <!-- PROCESS -->
+    <div class="project-section">
+        <h2>Process</h2>
+        <p class="project-text">
+            The first step was deciding as a team what we wanted the website to look like and what  we needed it to do. Next we worked together to create low fidelity wireframes of the  website and prototypes o f functional aspects such as the trail cards. Then we worked  with feedback from the stakeholders to improve upon our design and continued to create mid/high fidelity designs in Figma. Once the team and stakeholders were happy  with the design and prototypes, we submitted the final deliverable of the website.
+        </p>
+    </div>
+
+    <!-- RESULTS -->
+    <div class="project-section">
+        <h2>Results</h2>
+        <p class="project-text">
+            This project was completed successfully on time and within budget. Our team collaborated closely to refine design concepts and develop engaging, user-friendly interfaces. You can view the full mockup on Behance
+        </p>
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="footer-inner">
+        <a class="resume-btn" href="#" target="_blank">Resume</a>
+
+        <a href="index.html">
+    <img src="images/logo.png" alt="Logo" class="header-logo">
+
+        <div class="social-icons">
+    <a href="https://github.com/mpsiegle" target="_blank" aria-label="Michael Siegle GitHub">
+    <i class="fab fa-github"></i>
+    </a>
+
+
+    <a href="https://www.linkedin.com/in/michael-siegle-1a4276125/" target="_blank" aria-label="LinkedIn">
+    <i class="fab fa-linkedin"></i>
+    </a>
+
+
+    <a href="mailto:michael_siegle@outlook.com" aria-label="Email Michael Siegle">
+    <i class="fas fa-envelope"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="resume-popup" id="resumePopup">
+    <div class="resume-popup-box">
+        <h3>Resume added to downloads</h3>
+        <button id="closeResumePopup">Close</button>
+    </div>
+</div>
+
+
+    <script>
+document.querySelector(".contact-form").addEventListener("submit", function(e) {
+    e.preventDefault(); // stop page reload
+    alert("Thank you for the message!");
+    this.reset(); // optional: clears form
+});
+</script>
+
+<script>
+const hamburger = document.getElementById("hamburger");
+const navMenu = document.getElementById("navMenu");
+
+hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("active");
+    navMenu.classList.toggle("show");
+});
+</script>
+
+<script>
+const resumeBtn = document.querySelector(".resume-btn");
+const resumePopup = document.getElementById("resumePopup");
+const closeResumePopup = document.getElementById("closeResumePopup");
+
+resumeBtn.addEventListener("click", function(e) {
+    e.preventDefault();
+    resumePopup.style.display = "flex";
+});
+
+closeResumePopup.addEventListener("click", function() {
+    resumePopup.style.display = "none";
+});
+</script>
+
+
+
+</body>
+</html>
+
+</body>
+</html>

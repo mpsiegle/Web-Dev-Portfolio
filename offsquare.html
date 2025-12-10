@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Off Square Brewing Website Redesign</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../css/project.css">
+</head>
+
+<button class="back-to-top" id="backToTopBtn">↑</button>
+
+<script>
+    const backToTopBtn = document.getElementById("backToTopBtn");
+
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > 400) {
+            backToTopBtn.style.display = "flex";
+        } else {
+            backToTopBtn.style.display = "none";
+        }
+    });
+
+    backToTopBtn.addEventListener("click", () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+</script>
+
+<body>
+
+<!-- HEADER -->
+<header class="main-header">
+    <a href="index.html">
+    <img src="images/logo.png" alt="Logo" class="header-logo">
+    </a>
+
+    <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <nav class="nav-menu" id="navMenu">
+    <ul>
+        <li><a href="../index.html#about">About</a></li>
+        <li><a href="../index.html#projects">Projects</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+    </ul>
+</nav>
+
+</header>
+
+<!-- PAGE TITLE -->
+<section class="project-title-section">
+    <h1>Off Square Brewing<br>Website Redesign</h1>
+
+    <img src="images/offsquare_1.1.png" class="main-project-img" alt="Off Square Mockup">
+</section>
+
+<!-- GRAY BACKGROUND BLOCK -->
+<section class="project-content-wrapper">
+
+    <!-- OBJECTIVE -->
+    <div class="project-section">
+        <h2>Objective</h2>
+        <p class="project-text">
+            The purpose of this project was to heuristically evaluate a website and create a  redesign that would have better functionality based on the results of the evaluation.
+        </p>
+
+        <div class="project-image-row">
+            <img src="images/offsquare_2.png" alt="Placeholder 1">
+            <img src="images/offsquare_3.png" alt="Placeholder 2">
+        </div>
+    </div>
+
+    <!-- PROCESS -->
+    <div class="project-section">
+        <h2>Process</h2>
+        <p class="project-text">
+            Step one was heuristically evaluating the original website and finding any areas of user  frustration. Next was brainstorming a redesign that could fix the discovered issues and  create better user flow. Then I drafted low-fidelity wireframes that helped visualize the  website redesign. Finally, the new website design was fully visualized in high fidelity via  Figma.
+        </p>
+    </div>
+
+    <!-- RESULTS -->
+    <div class="project-section">
+        <h2>Results</h2>
+        <p class="project-text">
+            The final redesign successfully addressed all issues identified in the heuristic evaluation and was completed on time and under budget. This project focused on visual design only and was not fully coded or developed into a functional site. The full redesign is available on my Figma profile, and a mockup can be viewed on Behance.
+        </p>
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="footer-inner">
+        <a class="resume-btn" href="#" target="_blank">Resume</a>
+
+        <a href="index.html">
+    <img src="images/logo.png" alt="Logo" class="header-logo">
+
+        <div class="social-icons">
+    <a href="https://github.com/mpsiegle" target="_blank" aria-label="Michael Siegle GitHub">
+    <i class="fab fa-github"></i>
+    </a>
+
+
+    <a href="https://www.linkedin.com/in/michael-siegle-1a4276125/" target="_blank" aria-label="LinkedIn">
+    <i class="fab fa-linkedin"></i>
+    </a>
+
+
+    <a href="mailto:michael_siegle@outlook.com" aria-label="Email Michael Siegle">
+    <i class="fas fa-envelope"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="resume-popup" id="resumePopup">
+    <div class="resume-popup-box">
+        <h3>Resume added to downloads</h3>
+        <button id="closeResumePopup">Close</button>
+    </div>
+</div>
+
+
+    <script>
+document.querySelector(".contact-form").addEventListener("submit", function(e) {
+    e.preventDefault(); // stop page reload
+    alert("Thank you for the message!");
+    this.reset(); // optional: clears form
+});
+</script>
+
+<script>
+const hamburger = document.getElementById("hamburger");
+const navMenu = document.getElementById("navMenu");
+
+hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("active");
+    navMenu.classList.toggle("show");
+});
+</script>
+
+<script>
+const resumeBtn = document.querySelector(".resume-btn");
+const resumePopup = document.getElementById("resumePopup");
+const closeResumePopup = document.getElementById("closeResumePopup");
+
+resumeBtn.addEventListener("click", function(e) {
+    e.preventDefault();
+    resumePopup.style.display = "flex";
+});
+
+closeResumePopup.addEventListener("click", function() {
+    resumePopup.style.display = "none";
+});
+</script>
+
+
+
+</body>
+</html>
+
+
+</body>
+</html>
