@@ -7,11 +7,6 @@ All pages are fully responsive and built using clean, semantic HTML, CSS, and va
 
 ---
 
-## 🚀 Live Demo
-🔗 **View the website:** https://mpsiegle.github.io/
-
----
-
 ## 📌 Overview
 
 This portfolio website presents a collection of my development and design projects.  
